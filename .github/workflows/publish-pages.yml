@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
     paths:
-      - 'index.html'
+      - 'viewer_demo.zip'
       - '.github/workflows/publish-pages.yml'
 permissions:
   contents: read
@@ -22,11 +22,13 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - uses: actions/configure-pages@v5
-      - name: Preparar el HTML estático
+      - name: Extraer la muestra estática
         run: |
-          test -s index.html
           mkdir -p _site
-          cp index.html _site/index.html
+          unzip -q viewer_demo.zip -d _site
+          test -s _site/index.html
+          test -s _site/data/catalog.js
+          test -s _site/LICENCIA_DATOS.md
       - uses: actions/upload-pages-artifact@v4
         with:
           path: _site

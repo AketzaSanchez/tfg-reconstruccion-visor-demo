@@ -1,5 +1,7 @@
-# Demo pública del visualizador de reconstrucción
+# Muestra del visualizador de reconstrucción
 
-Visor interactivo con imágenes sintéticas para probar comparaciones, filtros y exportación de métricas. Las cifras no son resultados del piloto. El archivo `index.html` es autónomo.
+Muestra no comercial del piloto de nuScenes: un objetivo de `scene-0045`, nueve reconstrucciones en tres condiciones, referencias y cinco métricas.
 
-GitHub Pages publica el HTML mediante el workflow **Publicar demo**. En **Settings → Pages**, selecciona **GitHub Actions** como origen. El workflow se ejecuta al actualizar el HTML en `main` y también puede lanzarse manualmente desde **Actions**.
+Las vistas del dataset se comparten bajo [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) y los [términos de nuScenes](https://www.nuscenes.org/terms-of-use). El ZIP contiene `LICENCIA_DATOS.md` con la atribución y las transformaciones aplicadas. No se incluyen imágenes a resolución original.
+
+GitHub Pages despliega el contenido de `viewer_demo.zip` mediante **Publicar demo**. Para actualizar la muestra, reemplaza el ZIP en `main` por otro exportado en modo demo, con `index.html`, `assets/`, `data/` y `LICENCIA_DATOS.md` en la raíz del ZIP. Comprueba los permisos de publicación del material que añadas.
